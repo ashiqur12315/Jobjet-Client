@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 
 const AddAJob = () => {
@@ -41,6 +42,7 @@ const AddAJob = () => {
         axios.post(`${import.meta.env.VITE_API_URL}/add-job`, addJob )
         .then(() => {
             // console.log(res)
+            toast.success('Your Job has been posted to Jobjet.')
         })
         .catch(error => console.error(error))
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 const JobCard = ({ job }) => {
-    const { employer_name, job_title, job_posting_date, _id, application_deadline, min_salary, max_salary,
+    const {job_banner, employer_name, job_title, job_posting_date, _id, application_deadline, min_salary, max_salary,
         job_applicants_number } = job
     return (
         <motion.div whileHover={{ scale: 1.1 }}
@@ -18,7 +18,7 @@ const JobCard = ({ job }) => {
                     </div>
                 </div>
                 <div>
-                    <img src="https://source.unsplash.com/random/100x100/?5" alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
+                    <img src={job_banner} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
                     <h2 className="mb-1 text-xl font-semibold">{job_title}</h2>
                     <p className="text-sm dark:text-gray-600">Salary Range: ${min_salary}k to ${max_salary}k</p>
                     <p className="text-sm dark:text-gray-600">Job Applicants: {job_applicants_number} </p>
