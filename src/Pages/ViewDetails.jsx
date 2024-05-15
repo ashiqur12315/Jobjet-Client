@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { MdOutlineDescription } from "react-icons/md";
 
 
 const ViewDetails = () => {
@@ -52,18 +53,18 @@ const ViewDetails = () => {
                             {job_title}
                         </h1>
 
-                        <p className="max-w-lg mt-6 text-gray-500 dark:text-gray-400 ">
-                            {job_description}
+                        <p className="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                        <MdOutlineDescription className="text-2xl" /> {job_description}
                         </p>
 
                         <h3 className="mt-6 text-lg font-extrabold text-blue-500">Salary Range: ${min_salary} - ${max_salary}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">Number of Job Applicants: {job_applicants_number}</p>
+                        <p className="text-gray-600 dark:text-gray-300 my-4">Number of Job Applicants: {job_applicants_number}</p>
 
                         <div>
                             {
-                                isSameEmail ? <h2>You cant apply on your own posted job.</h2> : ''
+                                isSameEmail ? <h2 className="text-red-400 bg-red-100 p-1 rounded-md my-4">You can not apply on your own posted job.</h2> : ''
                             }
-                           { isDeadlinePassed ? <h2>Sorry, The job application deadline is over.</h2> : ''}
+                           { isDeadlinePassed ? <h2 className="text-red-400 bg-red-100 p-1 rounded-md my-4">Sorry, The job application deadline is over.</h2> : ''}
                             <button disabled={isSameEmail || isDeadlinePassed} className="btn btn-accent">
                                 {
                                     isSameEmail || isDeadlinePassed ?  "Apply" : <Modal1 job={job}></Modal1> 

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const PrivateRoutes = ({ children }) => {
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const { user, loading } = useContext(AuthContext)
 
     // useEffect(() => {
