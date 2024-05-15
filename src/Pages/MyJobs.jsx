@@ -76,7 +76,7 @@ const MyJobs = () => {
             <table className="table">
                 {/* head */}
                 <thead>
-                    <tr>
+                    <tr className="text-[14px] font-bold text-black bg-green-300">
                         <th>
                             Sl. No
                         </th>

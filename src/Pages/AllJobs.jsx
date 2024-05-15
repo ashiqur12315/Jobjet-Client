@@ -64,7 +64,7 @@ const AllJobs = () => {
                         placeholder="Search..."
                         className="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"
                         name="search"
-                    
+
                     />
                     <button type="submit"
                         className="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
@@ -79,7 +79,7 @@ const AllJobs = () => {
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className="text-[14px] font-bold text-black bg-green-300">
                             <th>
                                 Sl. No
                             </th>
@@ -92,45 +92,45 @@ const AllJobs = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        
+
                         {
 
                             searchJob.length > 0 && !searchJobLoading ? (
-                                
-                                    searchJob.map((j, index) => (
-                                        <tr key={j._id}>
-                                            <th>
-                                                {index + 1}
-                                            </th>
-                                            <td>
-                                                {j.job_title}
-                                            </td>
-                                            <td>
-                                                {new Date(j.job_posting_date).toLocaleDateString()}
-                                            </td>
-                                            <td>{new Date(j.application_deadline).toLocaleDateString()}</td>
-                                            <td>${j.min_salary} - ${j.max_salary}</td>
-                                            <th>
-                                                <Link to={`/viewDetails/${j._id}`} className="btn btn-accent flex items-center p-1 space-x-1.5">
-                                                    View Details
-                                                </Link>
-                                            </th>
-                                        </tr>
-                                    ))
-                                
+
+                                searchJob.map((j, index) => (
+                                    <tr key={j._id}>
+                                        <th >
+                                            {index + 1}
+                                        </th>
+                                        <td>
+                                            <span className="font-bold">{j.job_title}</span>
+                                        </td>
+                                        <td>
+                                            {new Date(j.job_posting_date).toLocaleDateString()}
+                                        </td>
+                                        <td><span className="bg-red-200 p-2 rounded-md">{new Date(j.application_deadline).toLocaleDateString()}</span></td>
+                                        <td><span className="bg-green-200 p-2 rounded-md">${j.min_salary} - ${j.max_salary}</span></td>
+                                        <th>
+                                            <Link to={`/viewDetails/${j._id}`} className="btn btn-accent flex items-center p-1 space-x-1.5">
+                                                View Details
+                                            </Link>
+                                        </th>
+                                    </tr>
+                                ))
+
                             ) :
                                 allJobs.map((j, index) => <tr key={j._id}>
                                     <th>
                                         {index + 1}
                                     </th>
                                     <td>
-                                        {j.job_title}
+                                        <span className="font-bold">{j.job_title}</span>
                                     </td>
                                     <td>
-                                        {j.job_posting_date}
+                                        {new Date(j.job_posting_date).toLocaleDateString()}
                                     </td>
-                                    <td>{new Date(j.application_deadline).toLocaleDateString()}</td>
-                                    <td>${j.min_salary} - ${j.max_salary}</td>
+                                    <td><span className="bg-red-200 p-2 rounded-md">{new Date(j.application_deadline).toLocaleDateString()}</span></td>
+                                    <td><span className="bg-green-200 p-2 rounded-md">${j.min_salary} - ${j.max_salary}</span></td>
                                     <th>
                                         <Link to={`/viewDetails/${j._id}`} className="btn btn-accent flex items-center p-1 space-x-1.5">
                                             View Details

@@ -70,7 +70,7 @@ const AppliedJobs = () => {
             {/* Filter system */}
             <div className="flex justify-center items-center gap-4">
                 <div className="dropdown dropdown-hover">
-                    <div tabIndex={0} role="button" className="btn m-1">Filter Jobs by Category</div>
+                    <div tabIndex={0} role="button" className="btn btn-info m-1">Filter Jobs by Category</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={() => handleFilter("all job")}><button>All Jobs</button></li>
                         <li onClick={() => handleFilter("Onsite Job")}><button>Onsite Job</button></li>
@@ -97,7 +97,7 @@ const AppliedJobs = () => {
                 <table className="table">
                     {/* head */}
                     <thead >
-                        <tr>
+                        <tr className="text-[14px] font-bold text-black bg-green-300">
                             <th>
                                 Sl. No
                             </th>
