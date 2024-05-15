@@ -64,27 +64,27 @@ const Modal1 = ({ job }) => {
         <div>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <button className="btn" onClick={() => document.getElementById('my_modal_4').showModal()}>Apply</button>
-            <dialog id="my_modal_4" className="modal">
+            <dialog id="my_modal_4" className="modal ">
                 <div className="modal-box w-11/12 max-w-5xl">
 
                     {/* form */}
                     <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
                         <form onSubmit={handleAppliedJobs} className="container flex flex-col mx-auto space-y-12">
 
-                            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50 border">
+                            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50 border-2 border-blue-400">
 
                                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-4">
                                     <div className="col-span-full sm:col-span-3">
-                                        <label htmlFor="username" className="text-sm">Name</label>
-                                        <input type="text" name="name" readOnly defaultValue={user?.displayName} className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                                        <label htmlFor="username" className="text-sm">Your Name</label>
+                                        <input type="text" name="name" readOnly defaultValue={user?.displayName} className="w-full p-2 border rounded-md  focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
                                     </div>
                                     <div className="col-span-full sm:col-span-3">
                                         <label className="text-sm">E-mail</label>
-                                        <input type="text" name='email' readOnly defaultValue={user?.email} className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                                        <input type="text" name='email' readOnly defaultValue={user?.email} className="w-full p-2 border rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
                                     </div>
                                     <div className="col-span-full">
                                         <label className="text-sm">Resume Link</label>
-                                        <textarea name='resume' placeholder="Enter your resume link here." className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"></textarea>
+                                        <textarea name='resume' required placeholder="Enter your resume link here."  className="w-full p-2 border rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"></textarea>
                                     </div>
                                     <div className="col-span-full">
                                         <input type="submit" className="btn btn-success" value="Submit Application" />

@@ -19,10 +19,10 @@ const JobByCategory = () => {
     }
 
     return (
-        <div className='mt-20'>
+        <div className='mt-20 px-5'>
             <Tabs>
-                <div className='flex items-center justify-center px-10 pb-10'>
-                    <TabList>
+                <div className='flex items-center justify-center px-10 pb-10 lg:text-2xl md:xl'>
+                    <TabList >
                         <Tab>All Jobs</Tab>
                         <Tab>Onsite Job</Tab>
                         <Tab>Remote Job</Tab>
@@ -32,35 +32,35 @@ const JobByCategory = () => {
                 </div>
 
                 <TabPanel>
-                    <div className='grid lg:grid-cols-3 gap-12 md:grid-cols-2 '>
+                    <div className='grid lg:grid-cols-3 gap-9 md:grid-cols-2 '>
                         {
                             jobs.map(job => <JobCard job={job} key={job._id}></JobCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:grid-cols-3 gap-12 md:grid-cols-2 '>
+                    <div className='grid lg:grid-cols-3 gap-9 md:grid-cols-2 '>
                         {
                             jobs.filter(j => j.job_category === 'Onsite Job').map(job => <JobCard job={job} key={job._id}></JobCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:grid-cols-3 gap-12 md:grid-cols-2 '>
+                    <div className='grid lg:grid-cols-3 gap-9 md:grid-cols-2 '>
                         {
                             jobs.filter(j => j.job_category === 'Remote Job').map(job => <JobCard job={job} key={job._id}></JobCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:grid-cols-3 gap-12 md:grid-cols-2 '>
+                    <div className='grid lg:grid-cols-3 gap-9 md:grid-cols-2 '>
                         {
                             jobs.filter(j => j.job_category === 'Hybrid Job').map(job => <JobCard job={job} key={job._id}></JobCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid lg:grid-cols-3 gap-12 md:grid-cols-2 '>
+                    <div className='grid lg:grid-cols-3 gap-9 md:grid-cols-2 '>
                         {
                             jobs.filter(j => j.job_category === 'Part Time Job').map(job => <JobCard job={job} key={job._id}></JobCard>)
                         }

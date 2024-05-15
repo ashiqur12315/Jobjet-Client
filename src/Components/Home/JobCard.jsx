@@ -7,7 +7,7 @@ const JobCard = ({ job }) => {
         job_applicants_number } = job
     return (
         <motion.div whileHover={{ scale: 1.1 }}
-         className="border border-red-500">
+         className="border-2 rounded-xl shadow-lg">
             <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex space-x-4">
 
@@ -20,7 +20,7 @@ const JobCard = ({ job }) => {
                 <div>
                     <img src={job_banner} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
                     <h2 className="mb-1 text-xl font-semibold">{job_title}</h2>
-                    <p className="text-sm dark:text-gray-600">Salary Range: ${min_salary}k to ${max_salary}k</p>
+                    <p className="text-sm dark:text-gray-600">Salary Range: ${min_salary} to ${max_salary}</p>
                     <p className="text-sm dark:text-gray-600">Job Applicants: {job_applicants_number} </p>
                 </div>
                 <div className=" justify-between">

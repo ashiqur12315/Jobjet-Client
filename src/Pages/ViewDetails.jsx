@@ -43,12 +43,12 @@ const ViewDetails = () => {
         <section className="bg-white dark:bg-gray-900">
             <div className="container px-6 py-10 mx-auto">
                 <div className="lg:-mx-6 lg:flex lg:items-center">
-                    <img className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]" src={job_banner} />
+                    <img className="object-cover border-2 shadow-2xl object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]" src={job_banner} />
 
                     <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
 
 
-                        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">
+                        <h1 className="text-4xl font-bold text-gray-800 dark:text-white lg:text-3xl lg:w-96">
                             {job_title}
                         </h1>
 
@@ -56,10 +56,10 @@ const ViewDetails = () => {
                             {job_description}
                         </p>
 
-                        <h3 className="mt-6 text-lg font-medium text-blue-500">Salary Range: ${min_salary} - ${max_salary}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">No of Job Applicants: ${job_applicants_number}</p>
+                        <h3 className="mt-6 text-lg font-extrabold text-blue-500">Salary Range: ${min_salary} - ${max_salary}</h3>
+                        <p className="text-gray-600 dark:text-gray-300">No of Job Applicants: {job_applicants_number}</p>
 
-                        <div className="border">
+                        <div>
                             {
                                 isSameEmail ? <h2>You cant apply on your own posted job.</h2> : ''
                             }
