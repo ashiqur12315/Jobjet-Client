@@ -57,7 +57,7 @@ const ViewDetails = () => {
                         </p>
 
                         <h3 className="mt-6 text-lg font-extrabold text-blue-500">Salary Range: ${min_salary} - ${max_salary}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">No of Job Applicants: {job_applicants_number}</p>
+                        <p className="text-gray-600 dark:text-gray-300">Number of Job Applicants: {job_applicants_number}</p>
 
                         <div>
                             {

@@ -15,7 +15,7 @@ const MyJobs = () => {
         queryKey: ['myjobs']
     })
     const getData = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/my-jobs/${user?.email}`, {withCredentials: true})
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/my-jobs/${user?.email}`, { withCredentials: true })
         return data
     }
 
@@ -30,7 +30,7 @@ const MyJobs = () => {
             refetch()
             Swal.fire({
                 title: "Deleted!",
-                text: "Your posted has been deleted.",
+                text: "Your posted Job has been deleted.",
                 icon: "success"
             });
         }
@@ -49,8 +49,8 @@ const MyJobs = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                    mutateAsync({ id })
-                    
+                mutateAsync({ id })
+
 
             }
         });
@@ -81,10 +81,14 @@ const MyJobs = () => {
                             Sl. No
                         </th>
                         <th>Job Title</th>
+                        <th>Application Deadline</th>
+                        <th>No of Applicants</th>
 
 
-                        <th></th>
-                        <th></th>
+                        <th>Job Category</th>
+                        <th>Salary Range</th>
+                        <th>Update Job</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -95,7 +99,26 @@ const MyJobs = () => {
                                 {index + 1}
                             </th>
                             <td>
-                                {j.job_title}
+                                <div className="flex items-center gap-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
+                                            <img src={j.job_banner} />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="font-bold">{j.job_title}</div>
+                                        <h2>Job posted on: {new Date(j.job_posting_date).toLocaleDateString()} </h2>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{new Date(j.application_deadline).toLocaleDateString()}</td>
+                            <td>{j.
+                                job_applicants_number}</td>
+                            <td>
+                                {j.job_category}
+                            </td>
+                            <td>
+                                ${j.min_salary} - ${j.max_salary}
                             </td>
 
                             <th>
