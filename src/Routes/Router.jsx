@@ -22,12 +22,12 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            // loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/jobs`)
+            
         },
         {
             path: '/viewDetails/:id',
             element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-            // loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/singleJob/${params.id}`)
+            
         },
         {
             path: '/login',
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
             path: '/allJobs',
             element: <AllJobs></AllJobs>,
-            // loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/jobs`)
+            
         },
         {
             path: '/add-a-job',
