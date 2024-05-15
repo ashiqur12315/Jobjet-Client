@@ -7,7 +7,7 @@ const JobCard = ({ job }) => {
         job_applicants_number } = job
     return (
         <motion.div whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }} className="border border-red-500">
+         className="border border-red-500">
             <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex space-x-4">
 

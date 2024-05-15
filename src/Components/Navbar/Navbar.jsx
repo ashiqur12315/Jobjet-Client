@@ -39,7 +39,7 @@ const Navbar = () => {
         <li><NavLink to='/appliedJobs'>Applied Jobs</NavLink></li>
         <li><NavLink to='/add-a-job'>Add A Job</NavLink></li>
         <li><NavLink to='/myJobs'>My Jobs</NavLink></li>
-        <li><NavLink to='/offer'>Blogs</NavLink></li>
+        <li><NavLink to='/blogs'>Blogs</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
