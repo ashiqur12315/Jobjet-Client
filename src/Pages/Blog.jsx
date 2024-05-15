@@ -5,7 +5,7 @@ const Blog = () => {
         <div>
 
             <div className="w-full lg:flex gap-6 md:flex p-6 overflow-hidden  dark:bg-gray-50 dark:text-gray-800">
-                <article className="w-3/5">
+                <article className="lg:w-3/5">
                     <h2 className="text-xl font-bold">What is an access token and refresh token?</h2>
                     <p className="my-4 dark:text-gray-600">Access tokens and refresh tokens are crucial components in authentication and authorization systems, commonly used in protocols like OAuth 2.0 and OpenID Connect. They help secure and manage user sessions in a secure and scalable way.</p>
                     <div>
@@ -18,7 +18,7 @@ const Blog = () => {
                         </ul>
                     </div>
                 </article>
-                <div className="w-2/5">
+                <div className="lg:w-2/5">
                     <img src="/ar.png" alt="" />
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Blog = () => {
             </div>
 
             <div className="w-full lg:flex gap-6 md:flex p-6 overflow-hidden  dark:bg-gray-50 dark:text-gray-800">
-                <article className="w-3/5">
+                <article className="lg:w-3/5">
                     <h2 className="text-xl font-bold">What is express js?</h2>
                     <p className="my-4 dark:text-gray-600">Express.js is a minimalist, flexible, and robust web application framework for Node.js, designed to build web applications and APIs. It simplifies the process of creating server-side applications with Node.js by providing a set of features and utilities out of the box.</p>
                     <div>
@@ -47,13 +47,13 @@ const Blog = () => {
                         </ul>
                     </div>
                 </article>
-                <div className="w-2/5">
+                <div className="lg:w-2/5">
                     <img src="/ejs.png" alt="" />
                 </div>
             </div>
 
             <div className="w-full lg:flex gap-6 md:flex p-6 overflow-hidden  dark:bg-gray-50 dark:text-gray-800">
-                <article className="w-3/5">
+                <article className="lg:w-3/5">
                     <h2 className="text-xl font-bold">What is Nest JS?</h2>
                     <p className="my-4 dark:text-gray-600">NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It is built with and fully supports TypeScript (while also enabling the use of pure JavaScript) and is heavily inspired by Angular, bringing a modular and structured approach to server-side development.</p>
                     <div>
@@ -72,7 +72,7 @@ const Blog = () => {
                         </ul>
                     </div>
                 </article>
-                <div className="w-2/5">
+                <div className="lg:w-2/5">
                     <img src="/nest.avif" alt="" />
                 </div>
             </div>
