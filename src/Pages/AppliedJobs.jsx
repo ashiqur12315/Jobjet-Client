@@ -79,7 +79,7 @@ const AppliedJobs = () => {
                         <li onClick={() => handleFilter("Part Time Job")}><button>Part Time Job</button></li>
                     </ul>
                 </div>
-                <PDFDownloadLink document={<MyDocument appliedJob={appliedJob}/>} fileName="example.pdf">
+                <PDFDownloadLink document={<MyDocument appliedJob={appliedJob}/>} fileName="applied jobs.pdf">
                     {({ loading }) =>
                         loading ? 'Loading document...' : <button className="btn btn-success">Download Summary</button>
                     }
