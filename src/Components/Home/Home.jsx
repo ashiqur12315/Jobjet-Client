@@ -33,7 +33,7 @@ const Home = () => {
     // console.log(jobs)
     return (
         <div>
-            <div className="px-10 py-8 border-2 border-red-500">
+            <div className=" ">
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -50,29 +50,33 @@ const Home = () => {
                 >
                     <div>
                         <SwiperSlide >
-                            <div className="bg-[url('https://i.ibb.co/Fwrykb6/job1.jpg')]   bg-cover bg-no-repeat h-[580px] w-full border-2 border-red-500">
-                                <div className="bg-gradient-to-r from-black to-transparent h-full">
-                                    <h2 className="text-3xl text-white font-bold">Unlock Your Career Potential with Jobjet</h2>
-                                    <h2 className="text-2xl text-white">Join Jobjet, where professionals like you <br /> thrive in a dynamic network designed to foster growth and opportunity.</h2>
+                            <div className="bg-[url('https://i.ibb.co/Fwrykb6/job1.jpg')]   bg-cover bg-no-repeat lg:h-[580px] md:h-[480px] w-full ">
+                                <div className="bg-gradient-to-r from-black to-transparent h-full ">
+                                    <h2 className="text-5xl text-orange-400 font-extrabold px-10 pt-20">Unlock Your Career Potential with Jobjet</h2>
+                                    <h2 className="text-3xl md:text-2xl text-white font-bold px-10 pt-10">Join Jobjet, where professionals like you  thrive in a dynamic network designed to foster growth and opportunity.</h2>
+                                    <button className="btn btn-success m-12">Join Us Now</button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="bg-[url('https://i.ibb.co/tZhBpBY/ai-generated-7790635-1280.webp')] bg-cover bg-no-repeat h-[580px] w-full border-2 border-red-500">
-                                <div className="bg-gradient-to-r from-black to-transparent h-full">
-                                    <h2 className="text-3xl text-white font-extrabold">Unlock Your Career Potential with Jobjet</h2>
-                                    <h2 className="text-3xl">Join Jobjet, where professionals like you thrive in a dynamic network designed to foster growth and opportunity.</h2>
+                        <SwiperSlide >
+                            <div className="bg-[url('https://i.ibb.co/jJ1GCTc/happy.jpg')]   bg-cover bg-no-repeat lg:h-[580px] md:h-[480px] w-full ">
+                                <div className="bg-gradient-to-r from-black to-transparent h-full ">
+                                    <h2 className="text-5xl text-orange-400 font-extrabold px-10 pt-20">Your Future Starts Here</h2>
+                                    <h2 className="text-3xl md:text-2xl text-white font-bold px-10 pt-10">Find the perfect job that matches your skills and aspirations. Join Jobjet today and connect with employers who are looking for talent like you.</h2>
+                                    <button className="btn btn-success m-12">Create an Account in Jobjet</button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="bg-[url('https://i.ibb.co/KqkjfWB/painting-3995999-1280.webp')] bg-cover bg-no-repeat h-[580px] w-full border-2 border-red-500">
-                                <div className="bg-gradient-to-r from-black to-transparent h-full">
-                                    <h2 className="text-3xl">Unlock Your Career Potential with Jobjet</h2>
-                                    <h2 className="text-3xl">Join Jobjet, where professionals like you thrive in a dynamic network designed to foster growth and opportunity.</h2>
+                        <SwiperSlide >
+                            <div className="bg-[url('https://i.ibb.co/T1CCCCx/empower.jpg')]   bg-cover bg-no-repeat lg:h-[580px] md:h-[480px] w-full ">
+                                <div className="bg-gradient-to-r from-black to-transparent h-full ">
+                                    <h2 className="text-5xl text-orange-400 font-extrabold px-10 pt-20">Empower Your Career Path</h2>
+                                    <h2 className="text-3xl md:text-2xl text-white font-bold px-10 pt-10">Explore endless job possibilities across various industries. With Jobjet, your career growth is just a click away</h2>
+                                    <button className="btn btn-success m-12">Explore Us</button>
                                 </div>
                             </div>
                         </SwiperSlide>
+                        
                     </div>
 
 
