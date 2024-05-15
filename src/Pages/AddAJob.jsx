@@ -84,7 +84,7 @@ const AddAJob = () => {
 
                     <div>
                         <label htmlFor="address" className="text-sm">Job Description </label>
-                        <textarea id="address" name="job_description" placeholder="Enter a Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                        <textarea id="address" name="job_description" placeholder="Enter a Short Description" className="w-full border rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
                     </div>
 
                     <div className=" col-span-full">
