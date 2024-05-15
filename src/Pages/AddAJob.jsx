@@ -43,6 +43,7 @@ const AddAJob = () => {
         .then(() => {
             // console.log(res)
             toast.success('Your Job has been posted to Jobjet.')
+            e.target.reset()
         })
         .catch(error => console.error(error))
 

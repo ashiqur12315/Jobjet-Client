@@ -34,7 +34,7 @@ const Modal1 = ({ job }) => {
         }
         // console.log(applicant_name, applicant_email, applicant_resume)
         // console.log(applied_job)
-        axios.post('${import.meta.env.VITE_API_URL}/applied-jobs', applied_job)
+        axios.post(`${import.meta.env.VITE_API_URL}/applied-jobs`, applied_job)
             .then(res => {
                 if (res.data.insertedId) {
                     navigate('/appliedJobs')
