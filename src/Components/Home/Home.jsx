@@ -9,6 +9,7 @@ import '../../../src/styles/styles.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Extra from "../../Pages/Extra";
 
 
 const Home = () => {
@@ -78,6 +79,7 @@ const Home = () => {
                 </Swiper>
             </div>
             <JobByCategory></JobByCategory>
+            <Extra></Extra>
 
         </div>
     );

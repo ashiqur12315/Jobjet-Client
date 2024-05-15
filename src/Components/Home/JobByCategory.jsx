@@ -21,7 +21,7 @@ const JobByCategory = () => {
     return (
         <div className='mt-20'>
             <Tabs>
-                <div className='flex items-center justify-center p-10'>
+                <div className='flex items-center justify-center px-10 pb-10'>
                     <TabList>
                         <Tab>All Jobs</Tab>
                         <Tab>Onsite Job</Tab>
