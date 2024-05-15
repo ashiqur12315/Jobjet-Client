@@ -21,6 +21,7 @@ const AppliedJobs = () => {
     // }
     const { user } = useContext(AuthContext)
     const [appliedJob, setAppliedJob] = useState([])
+    // console.log(appliedJob)
     // const [loading, setLoading] = useState(false)
 
     const { data: jobs = [], isLoading, error } = useQuery({
@@ -78,11 +79,11 @@ const AppliedJobs = () => {
                         <li onClick={() => handleFilter("Part Time Job")}><button>Part Time Job</button></li>
                     </ul>
                 </div>
-                {/* <PDFDownloadLink document={<MyDocument/>} fileName="example.pdf">
+                <PDFDownloadLink document={<MyDocument appliedJob={appliedJob}/>} fileName="example.pdf">
                     {({ loading }) =>
-                        loading ? 'Loading document...' : 'Download now!'
+                        loading ? 'Loading document...' : <button className="btn btn-success">Download Summary</button>
                     }
-                </PDFDownloadLink> */}
+                </PDFDownloadLink>
                 {/* {loading && (<button>
                     <ReactToPdf targetRef={componentRef} filename="applied-jobs.pdf">
                         {({ toPdf }) => (
