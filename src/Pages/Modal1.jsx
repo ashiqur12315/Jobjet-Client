@@ -55,7 +55,7 @@ const Modal1 = ({ job }) => {
                 // console.log(data)
             },
             onSuccess: () => {
-                toast.success('data incremented successfully')
+                // toast.success('data incremented successfully')
             }
         })
 
