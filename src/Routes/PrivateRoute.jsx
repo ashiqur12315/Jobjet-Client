@@ -1,0 +1,28 @@
+import { useContext, useEffect } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
+
+
+const PrivateRoutes = ({children}) => {
+    const location = useLocation();
+    // console.log(location)
+    const {user, loading} = useContext(AuthContext)
+
+    useEffect(() => {
+        if (!user && !loading) {
+            toast.error("Please log in first to view details");
+        }
+    }, [user, loading]);
+
+    if(loading){
+        return <span className="loading loading-infinity loading-lg"></span>;
+    }
+    
+    if(user){
+        return children;
+    }
+    return <Navigate state={location.pathname} to='/login'></Navigate>;
+};
+
+export default PrivateRoutes;
