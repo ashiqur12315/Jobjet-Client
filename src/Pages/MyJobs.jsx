@@ -94,7 +94,7 @@ const MyJobs = () => {
                 <tbody>
                     {/* row 1 */}
                     {
-                        myJobs.map((j, index) => <tr key={j._id}>
+                        myJobs.map((j, index) => <tr className="border-1 border-green-300" key={j._id}>
                             <th>
                                 {index + 1}
                             </th>
@@ -124,10 +124,10 @@ const MyJobs = () => {
                             <th>
                                 {/* <button className="btn  btn-accent"><Update></Update></button> */}
                                 {/* <Update j={j}/> */}
-                                <Link to={`/update/${j._id}`}>Update</Link>
+                                <Link className="btn btn-outline" to={`/update/${j._id}`}>Update</Link>
                             </th>
                             <th>
-                                <button onClick={() => handleDelete(j._id)} className="btn btn-warning">Delete</button>
+                                <button onClick={() => handleDelete(j._id)} className="btn btn-error">Delete</button>
                             </th>
                         </tr>)
                     }
