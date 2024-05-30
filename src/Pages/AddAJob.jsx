@@ -39,13 +39,22 @@ const AddAJob = () => {
             application_deadline: deadlineDate,
             job_applicants_number}    
 
-        axios.post(`${import.meta.env.VITE_API_URL}/add-job`, addJob )
-        .then(() => {
+        axios.post(`${import.meta.env.VITE_API_URL}/pay`, addJob )
+        .then((result) => {
+            console.log(result)
+            window.location.replace(result.data.url)
             // console.log(res)
-            toast.success('Your Job has been posted to Jobjet.')
-            e.target.reset()
+            // toast.success('Your Job has been posted to Jobjet.')
+            // e.target.reset()
         })
         .catch(error => console.error(error))
+        // axios.post(`${import.meta.env.VITE_API_URL}/add-job`, addJob )
+        // .then(() => {
+        //     // console.log(res)
+        //     toast.success('Your Job has been posted to Jobjet.')
+        //     e.target.reset()
+        // })
+        // .catch(error => console.error(error))
 
     }
     return (
@@ -111,8 +120,9 @@ const AddAJob = () => {
                     <label className="text-gray-700 dark:text-gray-200">Job Applicants Number:</label>
                     <input type="number" name="job_applicants_number" readOnly defaultValue={0} className=" px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                 </div>
-                <div className="flex justify-end mt-6">
-                    <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Add JOb</button>
+                <div className="flex justify-end mt-6 gap-5">
+                    <h2 className="p-3 bg-blue-200">You have to pay <span className="text-blue-700 font-extrabold">$100</span> per job posting</h2>
+                    <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Pay & Add Job</button>
                 </div>
             </form>
         </section>

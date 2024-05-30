@@ -12,6 +12,8 @@ import MyJobs from "../Pages/MyJobs";
 import Update1 from "../Pages/Update1";
 import AppliedJobs from "../Pages/AppliedJobs";
 import Blog from "../Pages/Blog";
+import Payment from "../Pages/Payment";
+import PaymentFail from "../Pages/PaymentFail";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
         {
             path: '/blogs',
             element: <Blog></Blog>
+        },
+        {
+            path: '/payment/success/:tranId',
+            element: <Payment></Payment>
+        },
+        {
+            path: '/payment/fail/:tranId',
+            element: <PaymentFail></PaymentFail>
         }
       ]
     },
